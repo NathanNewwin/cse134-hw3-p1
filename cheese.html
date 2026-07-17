@@ -6,8 +6,10 @@
 </head>
 <body>
     <header>
-        <h1>A Short Guide to Cheese</h1>
-        <p>by The CSE Cheese Society. Last updated <time datetime="2026-01">January 2026</time>.</p>
+        <hgroup>
+            <h1>A Short Guide to Cheese</h1>
+            <p>by The CSE Cheese Society. Last updated <time datetime="2026-01">January 2026</time>.</p>
+        </hgroup>
     </header>
 
     <main>
@@ -33,7 +35,7 @@
                 <p>
                     The word <q>cheese</q> comes from the Latin
                     <span class="latin" lang="la">caseus</span>, which also gives us the
-                    word <q>casein</q>, the main milk protein.
+                    word <span class="latin" lang="la"></span><q>casein</q></span>, the main milk protein.
                 </p>
             </section>
 
@@ -52,7 +54,7 @@
 
                     <dt>Blue</dt>
                     <dd>
-                        Veined with <span class="latin" lang="la">Penicillium roqueforti</span>.
+                        Veined with Penicillium roqueforti.
                         Roquefort, Gorgonzola, and Stilton lead this family. They are salty,
                         sharp, and divisive.
                     </dd>
@@ -102,8 +104,9 @@
                         </label>
                     </fieldset>
 
-                    <label for="favorite-cheese">Tell us your favorite cheese:</label>
-                    <input id="favorite-cheese" name="favorite-cheese" type="text" placeholder="e.g. Comte">
+                    <label for="favorite-cheese">Tell us your favorite cheese:
+                        <input id="favorite-cheese" name="favorite-cheese" type="text" placeholder="e.g. Comte">
+                    </label>
                     <button type="submit">Add it to the guide</button>
                 </form>
             </section>

@@ -1,0 +1,172 @@
+/* https://nathannewwin.github.io/cse134-hw3-p1/cheese.html
+    @import is worse since you have to download the stylesheets in order, cheese.css->cheese-vars.css. Compared to <link> where it downloads all of the stylesheets in parallel.
+    FOUC might become an issue since the page might not have loaded all of the resources yet.*/
+@import "cheese-vars.css";
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 4%;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: "Libre Caslon Text", Georgia, serif;
+    line-height: 1.65;
+}
+
+header {
+    padding: 1rem 0 2rem;
+}
+
+header,
+header p,
+.latin,
+dt,
+blockquote footer,
+a {
+    color: var(--color-accent);
+}
+
+header p {
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+h1,
+h2 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.7rem;
+}
+
+h2 {
+    margin: 2.4rem 0 1rem;
+    font-size: 1.65rem;
+}
+
+article > p {
+    margin: 0 0 2rem;
+    font-size: 1.25rem;
+}
+
+section p {
+    margin: 0 0 1rem;
+}
+
+span[lang],
+legend,
+blockquote p {
+    font-style: italic;
+}
+
+.latin,
+dt,
+label,
+#warning,
+button {
+    font-weight: 700;
+}
+
+dl {
+    margin: 1rem 0;
+}
+
+dt {
+    margin: 1rem 0 0;
+}
+
+dt::before {
+    content: "🧀 ";
+}
+
+dt + dd {
+    border-left: 0.15em solid var(--color-soft);
+    padding: 0.2em 0 0.8em 1em;
+}
+
+#warning {
+    border: 0.15rem solid var(--color-accent);
+    padding: 1em;
+}
+
+blockquote {
+    margin: 1.5rem 0;
+    border-left: 0.25em solid var(--color-accent);
+    padding: 1em 1.25em;
+    background: var(--color-soft);
+}
+
+blockquote p::before {
+    content: open-quote;
+    color: var(--color-accent)
+}
+
+blockquote p {
+    font-size: 1.1rem;
+}
+
+blockquote footer {
+    margin-top: 1em;
+    font-size: 0.85rem;
+}
+
+fieldset {
+    max-width: var(--content-width);
+    margin: 0 0 1rem;
+    border: 0.1rem solid var(--color-soft);
+    padding: 1em;
+}
+
+legend {
+    padding: 0 0.5em;
+}
+
+input,
+button {
+    margin: 0.4rem 0.25rem 0.7rem 0;
+    color: inherit;
+    font: inherit;
+}
+
+[type="text"] {
+    border: 0.1rem solid var(--color-accent);
+    padding: 0.4em;
+    background: var(--color-bg);
+}
+
+button {
+    border: 0.1rem solid var(--color-accent);
+    padding: 0.45em 0.75em;
+    background: var(--color-accent);
+    color: var(--color-bg);
+}
+
+a:hover {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+input:focus,
+button:focus,
+a:focus {
+    border: 0.1rem solid var(--color-accent);
+    background: var(--color-soft);
+}
+
+input:checked + label,
+label:has(input:checked) {
+    background: var(--color-soft);
+    color: var(--color-accent);
+}
+
+body > footer {
+    padding: 2rem 0 0;
+    font-size: 0.85rem;
+    text-align: center;
+}

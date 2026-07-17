@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>A Short Guide to Cheese</title>
+    <link rel="stylesheet" href="cheese.css">
+    <style>
+        article > p {
+            font-size: 1.3rem;
+        }
+        /* This wins over the cheese.css article > p rule because it is read after the entire stylesheet cascade is read.
+        This is at the lowest point in the cascade and therefore overrides the same selector above this. */
+    </style>
 </head>
 <body>
     <header>
@@ -35,7 +43,7 @@
                 <p>
                     The word <q>cheese</q> comes from the Latin
                     <span class="latin" lang="la">caseus</span>, which also gives us the
-                    word <span class="latin" lang="la"></span><q>casein</q></span>, the main milk protein.
+                    word <q>casein</q>, the main milk protein.
                 </p>
             </section>
 
@@ -54,7 +62,7 @@
 
                     <dt>Blue</dt>
                     <dd>
-                        Veined with Penicillium roqueforti.
+                        Veined with <span class="latin" lang="la">Penicillium roqueforti</span>.
                         Roquefort, Gorgonzola, and Stilton lead this family. They are salty,
                         sharp, and divisive.
                     </dd>
@@ -89,23 +97,24 @@
                         <legend>Which of these have you tasted?</legend>
 
                         <label>
-                            <input type="checkbox" name="tasted" value="brie">
+                            <input type="checkbox" name="tasted" value="brie" />
                             Brie
-                        </label>
+                        </label><br>
 
                         <label>
-                            <input type="checkbox" name="tasted" value="roquefort">
+                            <input type="checkbox" name="tasted" value="roquefort" />
                             Roquefort
-                        </label>
+                        </label><br>
 
                         <label>
-                            <input type="checkbox" name="tasted" value="aged-gouda">
+                            <input type="checkbox" name="tasted" value="aged-gouda" />
                             Aged Gouda
                         </label>
                     </fieldset>
 
-                    <label for="favorite-cheese">Tell us your favorite cheese:
-                        <input id="favorite-cheese" name="favorite-cheese" type="text" placeholder="e.g. Comte">
+                    <label for="favorite-cheese">
+                        Tell us your favorite cheese:
+                        <input id="favorite-cheese" name="favorite-cheese" type="text" placeholder="e.g. Comte" />
                     </label>
                     <button type="submit">Add it to the guide</button>
                 </form>
@@ -114,7 +123,7 @@
     </main>
 
     <footer>
-        <p>Copyright 2026 The CSE Cheese Society. Cheese responsibly.</p>
+        <p>Copyright 2026 <a href="https://nathannewwin.github.io/cse134-hw3-p1/cheese.html">The CSE Cheese Society</a>. Cheese responsibly.</p>
     </footer>
 </body>
 </html>
